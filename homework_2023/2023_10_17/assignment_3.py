@@ -9,12 +9,12 @@ try:
                 try:
                     confidence = float(line.split(":")[1].strip())
                     total += confidence
-                    count += 1
+                    counter += 1
                 except ValueError:
                     continue
 
-    if count > 0:
-        average = total / count
+    if counter > 0:
+        average = total / counter
         print(f"Average spam confidence: {average:.14f}")
 
 
